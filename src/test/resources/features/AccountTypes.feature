@@ -12,12 +12,13 @@ Feature: Account Types
     When the user navigates to "Customers", "Accounts"
     Then the title contains "Accounts - CustomerS"
 
-  @wip
+  @wip @smoke
   Scenario: Store manager user
     Given the user logged in as "store_manager"
     When the user navigates to "Customers", "Contacts"
     Then the title contains "Contacts - Customers"
 
+  @smoke
   Scenario Outline: Different user types
     Given the user logged in as "<userType>"
 
